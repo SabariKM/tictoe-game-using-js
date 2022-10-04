@@ -35,9 +35,6 @@ function defaultVal() {
   }
 }
 
-
-function activePlayerChk() {}
-
 function callBacks(val, itr) {
   if (val == "X") {
     itr.innerHTML = "O";
@@ -63,10 +60,15 @@ function oWinningCombo() {
       let comparedValues = oWinningArray.filter((result) =>
         winningCombinations[i].includes(result)
       );
+      console.log(comparedValues);
       if (comparedValues.length == 3) {
         container.classList.add("oWins");
         checkResult1 = comparedValues.length;
         container.classList.add("disabledInner");
+        window.something = comparedValues;
+        box[comparedValues[0]].style.color = "#fff";
+        box[comparedValues[1]].style.color = "#fff";
+        box[comparedValues[2]].style.color = "#fff";
         if(player1.innerHTML == "O") {
           activePlayer.classList.remove("activePlayer");
         } else {
@@ -87,6 +89,10 @@ function xWinningCombo() {
         container.classList.add("xWins");
         checkResult2 = comparedValues.length;
         container.classList.add("disabledInner");
+        window.something = comparedValues;
+        box[comparedValues[0]].style.color = "#fff";
+        box[comparedValues[1]].style.color = "#fff";
+        box[comparedValues[2]].style.color = "#fff";
         if(player1.innerHTML == "X") {
           activePlayer.classList.remove("activePlayer");
         } else {
