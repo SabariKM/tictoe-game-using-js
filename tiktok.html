@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Tik Tok</title>
 </head>
-<body>
-    <header class="header">WELCOME TO TIC-TOE!!!</header>
+<body onload="defaultVal()">
+    <header class="header">WELCOME TO TIC-TOE!!</header>
+    <div class="playerSymbol">
+        <div class="player1">O</div>
+        <div class="player2">X</div>
+    </div>
     <div class="container">
         <div class="box box-1"></div>
         <div class="box box-2"></div>
@@ -21,11 +25,11 @@
         <div class="box box-9"></div>        
     </div>
     <div class="btn-outer">
-        <button id="play-pause-btn" class="btn">Pause</button>
-        <button id="restart-btn" class="btn">Restart</button>
+        <button id="play-pause-btn" class="btn">Pause</button>        
+        <button type="button" onclick="window.location.href=window.location.href" class="btn">Restart</button>
+        <!-- <button id="restart-btn" class="btn">Restart</button> -->
     </div>
-
-
+    <!-- <button id="choose-btn" class="btn">Choose X</button> -->
     <script src="./js/script.js"></script>
 </body>
 </html>
